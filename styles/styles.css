@@ -1,0 +1,69 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #4646353;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    padding: 0 .5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px 4px;
+}
+
+.menu-btn::before {
+    content: "🟰";
+}
+
+.menu-btn.open::before {
+    content: "❌";
+}
+
+nav {
+    display: none;
+}
+
+nav.open {
+    display: block;
+}
+
+nav a {
+    display: block;
+    width: 100%;
+    padding: 1rem .5rem;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid red;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4px 4px;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .nav-link {
+        text-decoration: none;
+    }
+
+}
