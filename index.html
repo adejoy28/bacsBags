@@ -1,96 +1,146 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bacs Bags</title>
-        <meta name="description" content="A platform for buying and selling handmade bags">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="John Adebayo">
-        <meta name="keywords" content="Bags, Handmade, Buy, Sell, Fashion">
-        <meta property="og:title" content="Bacs Bags">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="images/logo.png">
-        <meta property="og:url" content="https://bacsbags.com">
-        <meta property="og:description" content="A platform for buying and selling handmade bags">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:creator" content="@johnadebayo">
-        <link rel="icon" href="images/favicon.ico">
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/styles-medium.css">
-        <link rel="stylesheet" href="styles/styles-large.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bacs Bags</title>
+  <meta name="description" content="A platform for buying and selling handmade bags" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="John Adebayo" />
+  <meta name="keywords" content="Bags, Handmade, Buy, Sell, Fashion" />
+  <meta property="og:title" content="Bacs Bags" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:url" content="https://bacsbags.com" />
+  <meta property="og:description" content="A platform for buying and selling handmade bags" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@johnadebayo" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" />
+  <style>
+    /* Splash styles */
+    #splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #00bfff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      z-index: 1000;
+      animation: fadeOut 2s ease 2s forwards;
+    }
 
-    <body>
-        <header>
-            <div class="container">
-                <a href="#" class="brand">
-                    <h2>BacsBags</h2>
-                </a>
-                <button id="menuBtn" class="menu-btn"></button>
-            </div>
-            <nav id="navLinks" class="nav">
-                <a href="home.html" class="nav-link">Home</a>
-                <a href="store.html" class="nav-link">Store</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="about.html" class="nav-link">About</a>
-                <!-- <a href="store.html">Store</a> -->
-            </nav>
-        </header>
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
 
+    /* Optional: fade-in for main content */
+    main {
+      opacity: 0;
+      animation: fadeIn 1s ease 2s forwards;
+    }
 
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
 
-        <h1>Bacs Bags Store</h1>
+<body>
+  <!-- Splash Screen -->
+  <div id="splash">Welcome to Bacs Bags</div>
 
-    <footer class="site-footer">
-<div class="footer-container">
-    <!-- Our Production -->
-    <div class="footer-section">
-    <h3>Our Production</h3>
-    <ul>
-        <li>School Bags</li>
-        <li>Fashion Bag</li>
-        <li>Traveling Bags</li>
-        <li>Purses</li>
-    </ul>
+  <!-- Background Sound -->
+  <audio id="bg-sound" autoplay loop>
+    <source src="Sound/summer-background-tropical-house-for-video-hot-dancing-with-emily-159740.mp3" type="audio/mpeg" />
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="#" class="brand">
+        <h2>BacsBags</h2>
+      </a>
+      <button id="menuBtn" class="menu-btn"></button>
     </div>
+    <nav id="navLinks" class="nav">
+      <a href="home.html" class="nav-link">Home</a>
+      <a href="store.html" class="nav-link">Store</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+  </header>
 
-    <!-- Quick Links -->
-    <div class="footer-section">
-    <h3>Quick Links</h3>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Store</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
+  <!-- Main Section -->
+  <main>
+    <section class="hero" data-aos="fade-up">
+      <h1>Welcome to Bacs Bags</h1>
+      <p>Your destination for unique, handmade bags crafted with care.</p>
+    </section>
+
+    <section class="featured-products" data-aos="fade-up" data-aos-delay="200">
+      <h2>Featured Collections</h2>
+      <p>Explore school, fashion, and travel bags designed with elegance.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" data-aos="fade-up" data-aos-delay="400">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Our Production</h3>
+        <ul>
+          <li>School Bags</li>
+          <li>Fashion Bags</li>
+          <li>Traveling Bags</li>
+          <li>Purses</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://wa.me/2348074337109">WhatsApp</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="mailto:example@email.com">Email</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">© BacsBags</div>
+  </footer>
 
-    <!-- Connect -->
-    <div class="footer-section">
-    <h3>Connect</h3>
-    <ul>
-        <li><a href="https://wa.me/2348074337109">WhatsApp</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="mailto:example@email.com">Email</a></li>
-    </ul>
-    </div>
-</div>
-
-<div class="footer-bottom">
-    © BacsBags
-</div>
-</footer>
-
-
-        <!-- scripts used are here -->
-        <script src="scripts/scripts.js" defer></script>
-    </body>
-
+  <!-- Scripts -->
+  <script src="scripts/scripts.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("bg-sound").volume = 0.2;
+  </script>
+</body>
 </html>
