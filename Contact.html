@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | BacsBags</title>
+  <link rel="stylesheet" href="styles/styles.css"/>
+
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1>BacsBags</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="about-section contact-page">
+    <div class="container" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Whether you have a question about bags, orders, or anything else, our team is ready to help.</p>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <form class="contact-form" action="#" method="post" data-aos="fade-right">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="John Doe"/>
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com"/>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required placeholder="Order Inquiry"/>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Google Map / Info -->
+        <div class="contact-info" data-aos="fade-left">
+          <h3>Reach Us</h3>
+          <p><strong>Address:</strong> 123 Bag Lane, Lagos, Nigeria</p>
+          <p><strong>Phone:</strong> +234 807 433 7109</p>
+          <p><strong>Email:</strong> support@bacsbags.com</p>
+          <div class="map-placeholder">
+            <!-- Replace src with your actual map -->
+            <iframe src="https://maps.google.com/maps?q=lagos%20nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section" data-aos="fade-up">
+        <h3>Our Production</h3>
+        <ul>
+          <li><a href="#">School Bags</a></li>
+          <li><a href="#">Fashion Bag</a></li>
+          <li><a href="#">Traveling Bags</a></li>
+          <li><a href="#">Purses</a></li>
+        </ul>
+      </div>
+      <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://wa.me/+2348074337109" target="_blank">WhatsApp</a></li>
+          <li><a href="#" target="_blank">Instagram</a></li>
+          <li><a href="#" target="_blank">Facebook</a></li>
+          <li><a href="mailto:support@bacsbags.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; BacsBags
+    </div>
+  </footer>
+
+  <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>

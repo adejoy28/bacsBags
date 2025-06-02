@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Store | BacsBags</title>
+  <link rel="stylesheet" href="styles/styles.css"/>
+
+  <!-- AOS for scroll animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1>BacsBags</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="store-hero" data-aos="fade-up">
+    <div class="container">
+      <h2>Your Perfect Bag Awaits</h2>
+      <p>Explore our latest collection of stylish and durable bags for every moment.</p>
+      <a href="#products" class="cta-btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="store-categories" data-aos="fade-up">
+    <div class="container">
+      <h3>Shop by Category</h3>
+      <div class="category-grid">
+        <div class="category-card" data-aos="zoom-in">
+          <img src="images/school-bag.jpg" alt="School Bags">
+          <h4>School Bags</h4>
+        </div>
+        <div class="category-card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/fashion-bag.jpg" alt="Fashion Bags">
+          <h4>Fashion Bags</h4>
+        </div>
+        <div class="category-card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/travel-bag.jpg" alt="Traveling Bags">
+          <h4>Traveling Bags</h4>
+        </div>
+        <div class="category-card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="images/purse.jpg" alt="Purses">
+          <h4>Purses</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="store-products" data-aos="fade-up">
+    <div class="container">
+      <h3>Trending Products</h3>
+      <div class="product-grid">
+        <!-- Product cards can be duplicated or looped with JS -->
+        <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+          <img src="images/image sch bag 1.avif" alt="Bag 1">
+          <h4>Urban Explorer</h4>
+          <p>₦12,000</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/product2.jpg" alt="Bag 2">
+          <h4>Classic Leather</h4>
+          <p>₦15,500</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/product3.jpg" alt="Bag 3">
+          <h4>Bold Traveler</h4>
+          <p>₦18,000</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/product4.jpg" alt="Bag 4">
+          <h4>Mini Purse</h4>
+          <p>₦7,800</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section" data-aos="fade-up">
+        <h3>Our Production</h3>
+        <ul>
+          <li><a href="#">School Bags</a></li>
+          <li><a href="#">Fashion Bag</a></li>
+          <li><a href="#">Traveling Bags</a></li>
+          <li><a href="#">Purses</a></li>
+        </ul>
+      </div>
+      <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://wa.me/+2348074337109" target="_blank">WhatsApp</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="mailto:support@bacsbags.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; BacsBags
+    </div>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
