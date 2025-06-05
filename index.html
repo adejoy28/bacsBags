@@ -1,93 +1,201 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bacs Bags</title>
-  <meta name="description" content="A platform for buying and selling handmade bags" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="John Adebayo" />
-  <meta name="keywords" content="Bags, Handmade, Buy, Sell, Fashion" />
-  <meta property="og:title" content="Bacs Bags" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/logo.png" />
-  <meta property="og:url" content="https://bacsbags.com" />
-  <meta property="og:description" content="A platform for buying and selling handmade bags" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@johnadebayo" />
-  <link rel="icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="styles/normalize.css" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" />
-  <style>
-    /* Splash styles */
-    #splash {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #00bfff;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      z-index: 1000;
-      animation: fadeOut 2s ease 2s forwards;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bacs Bags</title>
+    <meta
+      name="description"
+      content="A platform for buying and selling handmade bags"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="John Adebayo" />
+    <meta name="keywords" content="Bags, Handmade, Buy, Sell, Fashion" />
+    <meta property="og:title" content="Bacs Bags" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/logo.png" />
+    <meta property="og:url" content="https://bacsbags.com" />
+    <meta
+      property="og:description"
+      content="A platform for buying and selling handmade bags"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@johnadebayo" />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- <link rel="stylesheet" href="styles/styles1.css" /> -->
+    <link rel="stylesheet" href="styles/styles-medium.css" />
 
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
+    <!-- Outside Packages -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    /* Optional: fade-in for main content */
-    main {
-      opacity: 0;
-      animation: fadeIn 1s ease 2s forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Splash Screen -->
-  <div id="splash">Welcome to Bacs Bags</div>
-
-  <!-- Background Sound -->
-  <audio id="bg-sound" autoplay loop>
-    <source src="Sound/summer-background-tropical-house-for-video-hot-dancing-with-emily-159740.mp3" type="audio/mpeg" />
-    Your browser does not support the audio tag.
-  </audio>
-
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <a href="#" class="brand">
-        <h2>BacsBags</h2>
-      </a>
-      <button id="menuBtn" class="menu-btn"></button>
+  <body>
+    <!-- Splash Screen --> <!-- Changed this to a spinner !-->  
+    <div id="splash">
+      <div class="spinner"></div>
+      <!-- <div>Welcome to Bacs Bags</div> -->
     </div>
-    <nav id="navLinks" class="nav">
-      <a href="home.html" class="nav-link">Home</a>
-      <a href="store.html" class="nav-link">Store</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a href="about.html" class="nav-link">About</a>
-    </nav>
-  </header>
 
-  <!-- Main Section -->
-  <main>
+    <!-- The background sound is disabled for now -->
+    <!-- Background Sound
+    <audio id="bg-sound" autoplay loop>
+      <source src="Sound/summer-background-tropical-house-for-video-hot-dancing-with-emily-159740.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio> 
+  -->
+
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="logo"><a href="index.html">BacsBags</a></div>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>SHOP YOUR FAVORITE <span>STYLISH BAGS</span></h1>
+            <p>
+              Discover Top Designer Bags On Bags. Belt Bags, Backpacks, Duffels
+              Bags, Work Bags, Luggage, And Tote Bags. Worldwide Shipping.
+            </p>
+            <a href="store.html" class="btn-primary">Explore More</a>
+          </div>
+          <div class="hero-images">
+            <div class="image-container">
+              <img src="images/hero-bag-1.jpg" alt="Designer Bag" />
+            </div>
+            <div class="image-container">
+              <img src="images/hero-bag-2.jpg" alt="Leather Bag" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about">
+        <div class="container">
+          <div class="about-image">
+            <img src="images/about-bag.jpg" alt="About Our Store" />
+          </div>
+          <div class="section-header">
+            <h2>ABOUT US</h2>
+            <p>
+              At BacsBags, we are passionate about crafting premium quality bags
+              that combine style, functionality, and durability for every
+              occasion. Our dedicated team of designers works tirelessly to
+              create unique pieces that reflect the latest trends while ensuring
+              each bag meets our high standards of craftsmanship.
+            </p>
+            <a href="about.html" class="btn-secondary">Explore More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Arrivals Section -->
+      <section class="new-arrivals">
+        <div class="container">
+          <h2>NEW ARRIVALS</h2>
+          <div class="arrivals-grid">
+            <div class="product-card">
+              <img src="images/hero-bag-1.jpg" alt="New Arrival Bag 1" />
+              <h3>Minimalist Tote</h3>
+              <p>N50,000.00</p>
+            </div>
+            <div class="product-card">
+              <img src="images/bag-2.jpg" alt="New Arrival Bag 2" />
+              <h3>Leather Backpack</h3>
+              <p>N100,000.00</p>
+            </div>
+            <div class="product-card">
+              <img src="images/bag-3.jpg" alt="New Arrival Bag 3" />
+              <h3>Travel Duffel</h3>
+              <p>N150,000.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews section -->
+      <section class="reviews">
+        <div class="container">
+          <h2>REVIEWS</h2>
+          <div class="review-card">
+            <img
+              src="https://randomuser.me/api/portraits/women/43.jpg"
+              alt="Customer Review"
+            />
+            <h4>Sarah Johnson</h4>
+            <p class="review-text">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, nunc
+              vulputate libero et velit interdum."
+            </p>
+            <p class="review-role">Fashion Blogger</p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div class="container">
+          <div class="newsletter-content">
+            <h2>GET INSTANT DISCOUNT</h2>
+            <p>
+              Subscribe to our newsletter and get all the latest news about new
+              products, promotions, offers, and discounts.
+            </p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+          </div>
+          <div class="newsletter-image">
+            <img src="images/bag-1.jpg" alt="Special Offer" />
+            <!-- <img src="https://images.unsplash.com/photo-1566150902887-9679ecc155ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Special Offer"> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Old Code -->
+      <!-- </section>
     <section class="hero" data-aos="fade-up">
       <h1>Welcome to Bacs Bags</h1>
       <p>Your destination for unique, handmade bags crafted with care.</p>
@@ -96,51 +204,53 @@
     <section class="featured-products" data-aos="fade-up" data-aos-delay="200">
       <h2>Featured Collections</h2>
       <p>Explore school, fashion, and travel bags designed with elegance.</p>
-    </section>
-  </main>
+    </section> -->
+    </main>
 
-  <!-- Footer -->
-  <footer class="site-footer" data-aos="fade-up" data-aos-delay="400">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Our Production</h3>
-        <ul>
-          <li>School Bags</li>
-          <li>Fashion Bags</li>
-          <li>Traveling Bags</li>
-          <li>Purses</li>
-        </ul>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <!-- <footer class="site-footer" data-aos="fade-up" data-aos-delay="400"> -->
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Our Production</h3>
+          <ul>
+            <li><a href="/store.html">School Bags</a></li>
+            <li><a href="/store.html">Fashion Bags</a></li>
+            <li><a href="/store.html">Traveling Bags</a></li>
+            <li><a href="/store.html">Purses</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="https://wa.me/2348074337109">WhatsApp</a></li>
+            <li><a href="https://instagram.com/bacsbags">Instagram</a></li>
+            <li><a href="https://facebook.com/bacsbags">Facebook</a></li>
+            <li><a href="mailto:bacsbags@gmail.com">Email</a></li>
+          </ul>
+        </div>
       </div>
+      <div class="footer-bottom">© BacsBags</div>
+    </footer>
 
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="store.html">Store</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Connect</h3>
-        <ul>
-          <li><a href="https://wa.me/2348074337109">WhatsApp</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="mailto:example@email.com">Email</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">© BacsBags</div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="scripts/scripts.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
+    <!-- Scripts -->
+    <!-- <script src="scripts/scripts.js" defer></script> -->
+    <script src="js/script1.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script>
     AOS.init();
     document.getElementById("bg-sound").volume = 0.2;
-  </script>
-</body>
+  </script> -->
+  </body>
 </html>

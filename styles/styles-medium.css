@@ -1,9 +1,10 @@
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 4px 4px;
+        /* border: 1px solid red; *\/
     }
 
     .menu-btn {
@@ -13,10 +14,107 @@
     nav {
         display: flex;
         gap: 1rem;
+        flex-direction: row;
     }
 
     .nav-link {
         text-decoration: none;
     }
 
+} */
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .about .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about .section-header {
+        text-align: left;
+        flex: 1;
+    }
+
+    .about-image {
+        flex: 1;
+    }
+
+    .arrivals-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .newsletter .container {
+        flex-direction: row;
+        gap: 40px;
+    }
+    
+    .newsletter-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    footer .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 120px 0 60px;
+    }
+    .about-image {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .arrivals-grid {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-images {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+    }
+    .arrivals-grid {
+        grid-template-columns: 1fr;
+    }
 }
