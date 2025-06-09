@@ -1,73 +1,125 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | BacsBags</title>
-  <link rel="stylesheet" href="styles/styles.css"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bacs Bags</title>
+  <meta name="description" content="A platform for buying and selling handmade bags" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="John Adebayo" />
+  <meta name="keywords" content="Bags, Handmade, Buy, Sell, Fashion" />
+  <meta property="og:title" content="Bacs Bags" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:url" content="https://bacsbags.com" />
+  <meta property="og:description" content="A platform for buying and selling handmade bags" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@johnadebayo" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/styles-medium.css" />
 
-  <!-- AOS Animation -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Outside Packages -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" />
 </head>
+
 <body>
+  <!-- Splash Screen -->
+  <!-- Changed this to a spinner !-->
+  <div id="splash">
+    <div class="spinner"></div>
+    <!-- <div>Welcome to Bacs Bags</div> -->
+  </div>
+
+  <!-- The background sound is disabled for now -->
+  <!-- Background Sound
+    <audio id="bg-sound" autoplay loop>
+      <source src="Sound/summer-background-tropical-house-for-video-hot-dancing-with-emily-159740.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio> 
+  -->
 
   <!-- Header -->
-  <header class="site-header">
+  <header>
     <div class="container">
-      <h1>BacsBags</h1>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="store.html">Store</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+      <div class="logo"><a href="index.html">BacsBags</a></div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- Contact Section -->
-  <section class="about-section contact-page">
-    <div class="container" data-aos="fade-up">
-      <h2>Contact Us</h2>
-      <p>We’d love to hear from you! Whether you have a question about bags, orders, or anything else, our team is ready to help.</p>
 
-      <div class="contact-grid">
-        <!-- Contact Form -->
-        <form class="contact-form" action="#" method="post" data-aos="fade-right">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required placeholder="John Doe"/>
+  <!-- main section -->
+  <main>
+    <!-- Contact Section -->
+    <section class="about-section contact-page">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Whether you have a question about bags, orders, or anything else, our team is
+          ready to help.</p>
 
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required placeholder="you@example.com"/>
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <form class="contact-form" action="#" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe" />
 
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required placeholder="Order Inquiry"/>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="Order Inquiry" />
 
-          <button type="submit">Send Message</button>
-        </form>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
 
-        <!-- Google Map / Info -->
-        <div class="contact-info" data-aos="fade-left">
-          <h3>Reach Us</h3>
-          <p><strong>Address:</strong> 123 Bag Lane, Lagos, Nigeria</p>
-          <p><strong>Phone:</strong> +234 807 433 7109</p>
-          <p><strong>Email:</strong> support@bacsbags.com</p>
-          <div class="map-placeholder">
-            <!-- Replace src with your actual map -->
-            <iframe src="https://maps.google.com/maps?q=lagos%20nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+            <button type="submit">Send Message</button>
+          </form>
+
+          <!-- Google Map / Info -->
+          <div class="contact-info">
+            <h3>Reach Us</h3>
+            <p><strong>Address:</strong> 123 Bag Lane, Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> +234 807 433 7109</p>
+            <p><strong>Email:</strong> support@bacsbags.com</p>
+            <div class="map-placeholder">
+              <!-- Replace src with your actual map -->
+              <iframe src="https://maps.google.com/maps?q=lagos%20nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-container">
-      <div class="footer-section" data-aos="fade-up">
+      <div class="footer-section">
         <h3>Our Production</h3>
         <ul>
           <li><a href="#">School Bags</a></li>
@@ -76,7 +128,7 @@
           <li><a href="#">Purses</a></li>
         </ul>
       </div>
-      <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+      <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -85,7 +137,7 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </div>
-      <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+      <div class="footer-section">
         <h3>Connect</h3>
         <ul>
           <li><a href="https://wa.me/+2348074337109" target="_blank">WhatsApp</a></li>
@@ -100,13 +152,51 @@
     </div>
   </footer>
 
-  <!-- AOS Animation JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+<!-- Footer -->
+<footer class="site-footer">
+  <!-- <footer class="site-footer" data-aos="fade-up" data-aos-delay="400"> -->
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Our Production</h3>
+      <ul>
+        <li><a href="/store.html">School Bags</a></li>
+        <li><a href="/store.html">Fashion Bags</a></li>
+        <li><a href="/store.html">Traveling Bags</a></li>
+        <li><a href="/store.html">Purses</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="https://wa.me/2348074337109">WhatsApp</a></li>
+        <li><a href="https://instagram.com/bacsbags">Instagram</a></li>
+        <li><a href="https://facebook.com/bacsbags">Facebook</a></li>
+        <li><a href="mailto:bacsbags@gmail.com">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© BacsBags</div>
+</footer>
+
+<!-- Scripts -->
+<!-- <script src="scripts/scripts.js" defer></script> -->
+<script src="js/script1.js" defer></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- <script>
+    AOS.init();
+    document.getElementById("bg-sound").volume = 0.2;
+  </script> -->
 </body>
+
 </html>
