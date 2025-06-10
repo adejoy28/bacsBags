@@ -68,10 +68,27 @@
         padding: 20px;
     }
 
+    /********************************************************/
+    /* Store Page Styles                                    */
+    /********************************************************/
+    .store-hero {
+        padding: 6rem 1rem;
+    }
 
+    .store-hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .store-categories .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .store-products .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     /********************************************/
-    /* Contact Page Styles */
+    /* Contact Page Styles                      */
     /********************************************/
 
     .contact-page {
@@ -98,7 +115,7 @@
 
 
     /********************************************/
-    /* Footer Styles */
+    /* Footer Styles                            */
     /********************************************/
     footer .container {
         display: grid;
@@ -151,5 +168,24 @@
 
     .arrivals-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/********************************************************/
+/* For Desktops                                         */
+/********************************************************/
+
+@media (min-width: 1024px) {
+    .store-categories .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .store-products .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .store-products .product-card img {
+        height: 200px;
     }
 }
